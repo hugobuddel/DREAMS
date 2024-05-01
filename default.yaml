@@ -8,20 +8,20 @@ packages :
 - DREAMS
 
 yamls :
-- LFOA.yaml
-- LFOA_SBIG.yaml
+- DREAMS.yaml
+- DREAMS_SBIG.yaml
 
 properties :
   airmass : 1.2
-  declination : +30
+  declination : -31.273 
   hour_angle : 0
   pupil_angle : 0
-  dit : 30
+  dit : 10
   ndit : 1
-  filter_name : K
+  filter_name :   J
   sky :
-    bg_mag : 19.5
-    filter_name : K
+    bg_mag : 14.9
+    filter_name : J
 
 ---
 
@@ -36,9 +36,9 @@ properties :
     seed : 9001
 
   spectral :
-    wave_min : 0.3
-    wave_mid : 0.55
-    wave_max : 1.0
+    wave_min : 1.17
+    wave_mid : 1.25
+    wave_max : 1.33
 
   computing :
     preload_field_of_view : False
