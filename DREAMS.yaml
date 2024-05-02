@@ -13,7 +13,7 @@ description : |
 
 properties :
     temperature : -60  # deg C
-    pixel_scale : 0.307     # arcsec / pixel
+    pixel_scale : 2.48    # arcsec / pixel
     plate_scale : 45.15     # arcsec / mm
 
 effects :
