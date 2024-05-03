@@ -3,34 +3,16 @@ object : detector
 alias : DET
 name : DREAMS_DET
 description : A set of 6 InGaAs detectors
+
 properties :
+    image_plane_id : 0
     temperature : -40
     dit : "!OBS.dit"
     ndit : "!OBS.ndit"
-    bin_size : 2
-
-effects :
--   name: sbig_detector
-    class: DetectorList
-    include: True
-    kwargs:
-        image_plane_id : 0
-        array_dict:
-            id: [1]
-            pixel_size: [0.012]
-            angle: [0.]
-            gain: [4.3]
-            x_cen: [0.]
-            y_cen: [0.]
-            x_size: [267]
-            y_size: [140]
-        x_cen_unit: mm
-        y_cen_unit: mm
-        x_size_unit: mm
-        y_size_unit: mm
-        pixel_size_unit: mm
-        angle_unit: deg
-        gain_unit: electron/adu
+    width: 1280
+    height: 1024
+    x: 0
+    y: 0
       -   name : qe_curve
     description : Quantum efficiency curves for each detector
     class : QuantumEfficiencyCurve
