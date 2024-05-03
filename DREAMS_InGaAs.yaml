@@ -1,0 +1,72 @@
+### InGaAs DETECTOR
+object : detector
+alias : DET
+name : DREAMS_DET
+description : A set of 6 InGaAs detectors
+properties :
+    temperature : -40
+    dit : "!OBS.dit"
+    ndit : "!OBS.ndit"
+    bin_size : 2
+
+effects :
+-   name: sbig_detector
+    class: DetectorList
+    include: True
+    kwargs:
+        image_plane_id : 0
+        array_dict:
+            id: [1]
+            pixel_size: [0.012]
+            angle: [0.]
+            gain: [4.3]
+            x_cen: [0.]
+            y_cen: [0.]
+            x_size: [14.8512]
+            y_size: [10.0096]
+        x_cen_unit: mm
+        y_cen_unit: mm
+        x_size_unit: mm
+        y_size_unit: mm
+        pixel_size_unit: mm
+        angle_unit: deg
+        gain_unit: electron/adu
+      -   name : qe_curve
+    description : Quantum efficiency curves for each detector
+    class : QuantumEfficiencyCurve
+    kwargs :
+        filename : QE_InGaAs.dat
+
+-   name: exposure_action
+    description: Summing up sky signal for all DITs and NDITs
+    class: SummedExposure
+
+-   name: dark_current
+    description : SBIG dark current
+    class: DarkCurrent
+    # [e-/s] level of dark current for each detector
+    kwargs:
+        value: 67
+
+-   name: shot_noise
+    description : apply poisson shot noise to images
+    class: ShotNoise
+
+-   name: detector_linearity
+    description : Linearity characteristics of InGaAs chips
+    class: LinearityCurve
+    kwargs:
+        array_dict: {incident: [0, 77000, 999999999999],
+                     measured: [0, 77000, 77000]}
+
+-   name : readout_noise
+    description : Readout noise frames
+    class : BasicReadoutNoise
+    kwargs :
+        noise_std : 75
+
+-   name : detector_binning
+    description : Binning the detector frames
+    class : BinnedImage
+    kwargs :
+        bin_size : "!DET.bin_size"
