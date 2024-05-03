@@ -39,7 +39,7 @@ effects :
     description : telescope and camera optical surfaces
     class: SurfaceList
     kwargs:
-        filename: LIST_LFOA_mirrors_static.dat
+        filename: LIST_DREAMS_mirrors_static.dat
 
 -   name: filter_curve
     description : transmission curve for filter
