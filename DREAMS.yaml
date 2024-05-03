@@ -14,7 +14,7 @@ description : |
 properties :
     temperature : -60  # deg C
     pixel_scale : 2.48    # arcsec / pixel
-    plate_scale : 206.265     # arcsec / mm
+    plate_scale : 0.206     # arcsec / mm
 
 effects :
 -   name : seeing_psf
