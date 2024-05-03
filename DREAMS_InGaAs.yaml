@@ -56,8 +56,8 @@ effects :
     description : Linearity characteristics of InGaAs chips
     class: LinearityCurve
     kwargs:
-        array_dict: {incident: [0, 77000, 999999999999],
-                     measured: [0, 77000, 77000]}
+        array_dict: {incident: [0, 57143, 999999999999],
+                     measured: [0, 57143, 57143]}
 
 -   name : readout_noise
     description : Readout noise frames
