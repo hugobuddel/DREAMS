@@ -13,7 +13,16 @@ properties :
     height: 1024
     x: 0
     y: 0
-      -   name : qe_curve
+effects :
+-   name: full_detector_array
+    description : THe full DREAMS detector array list
+    class: DetectorList
+    include: True
+    kwargs:
+        filename : FPA_array_layout.dat
+        active_detectors : "all"
+        
+ -   name : qe_curve
     description : Quantum efficiency curves for each detector
     class : QuantumEfficiencyCurve
     kwargs :
