@@ -4,12 +4,12 @@ alias : OBS
 name : DREAMS_default_configuration
 description : default parameters needed for the DREAMS simulation
 
-packages :
-- DREAMS
+packages:
+  - DREAMS
 
 yamls :
-- DREAMS.yaml
-- DREAMS_InGaAs.yaml
+  - DREAMS.yaml
+  - DREAMS_InGaAs.yaml
 
 properties :
   airmass : 1.2
