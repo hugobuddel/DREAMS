@@ -1,3 +1,4 @@
+---
 ### default observation parameters needed for DREAMS simulation
 object : configuration
 alias : OBS
@@ -23,7 +24,6 @@ properties :
     bg_mag : 14.9
     filter_name : J
 
----
 
 ### default simulation parameters needed for DREAMS simulation
 object : simulation
