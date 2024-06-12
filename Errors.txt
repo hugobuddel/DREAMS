@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 726, in wrapper
+    output = func(*args, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 114, in __init__
+    self.load(cmds)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 147, in load
+    self.optics_manager = OpticsManager(self.yaml_dicts, self.cmds)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 52, in __init__
+    self.load_effects(yaml_dicts, **self.meta)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 97, in load_effects
+    self.optical_elements.extend(OpticalElement(dic, cmds=self.cmds, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 97, in <genexpr>
+    self.optical_elements.extend(OpticalElement(dic, cmds=self.cmds, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_element.py", line 81, in __init__
+    self.effects.append(make_effect(eff_dic,
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/effects_utils.py", line 63, in make_effect
+    effect = effect_cls(cmds=cmds, **effect_kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 235, in __init__
+    super().__init__(**kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 77, in __init__
+    super().__init__(filename=filename, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/effects.py", line 40, in __init__
+    super().__init__(filename=filename, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/data_container.py", line 115, in __init__
+    self._load_ascii()
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/data_container.py", line 151, in _load_ascii
+    self.meta.update(hdr_dict)
+ValueError: dictionary update sequence element #0 has length 93; 2 is required
