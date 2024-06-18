@@ -16,14 +16,8 @@ Traceback (most recent call last):
     self.effects.append(make_effect(eff_dic,
   File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/effects_utils.py", line 63, in make_effect
     effect = effect_cls(cmds=cmds, **effect_kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 235, in __init__
-    super().__init__(**kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 77, in __init__
-    super().__init__(filename=filename, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/effects.py", line 40, in __init__
-    super().__init__(filename=filename, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/data_container.py", line 115, in __init__
-    self._load_ascii()
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/data_container.py", line 151, in _load_ascii
-    self.meta.update(hdr_dict)
-ValueError: dictionary update sequence element #0 has length 93; 2 is required
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 393, in __init__
+    filt_name = from_currsys(kwargs["filter_name"], cmds)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 542, in from_currsys
+    raise ValueError(f"{item} was not found in rc.__currsys__")
+ValueError: !OBS.filter_name was not found in rc.__currsys__
