@@ -1,0 +1,33 @@
+>>> scopesim.bug_report()
+Python:
+3.9.12 (main, Apr  5 2022, 01:53:17) 
+[Clang 12.0.0 ]
+
+Installed Python packages:
+           anisocado: 0.3.0
+         astar-utils: 0.2.2
+             astropy: 5.3.4
+      beautifulsoup4: 4.12.3
+            docutils: 0.19
+               httpx: 0.23.3
+                lxml: 4.9.4
+          matplotlib: 3.8.4
+      more-itertools: 10.2.0
+               numpy: 1.26.4
+               pooch: 1.8.1
+              pyyaml: 6.0.1
+               scipy: 1.13.0
+            scopesim: 0.8.0
+       scopesim_data: could not be loaded.
+  scopesim_templates: 0.5.1
+         skycalc_ipy: 0.4.0
+             synphot: 1.3.post0
+                tqdm: 4.66.2
+
+Installed IRDB packages:
+
+Operating System info:
+   System: Darwin
+  Release: 22.6.0
+  Version: Darwin Kernel Version 22.6.0: Wed Jul  5 22:21:56 PDT 2023; root:xnu-8796.141.3~6/RELEASE_X86_64
+  Machine: x86_64
