@@ -6,7 +6,7 @@ name : DREAMS_InGaAs_detector
 description : base configuration for LFOA SBIG camera
 
 properties:
-  mage_plane_id : 0
+  image_plane_id : 0
   temperature : -60
   dit : "!OBS.dit"
   ndit : "!OBS.ndit"
@@ -37,7 +37,7 @@ effects:
     description : SBIG dark current
     class: DarkCurrent
     kwargs:
-      value: 67
+      value: 67.
 
 -   name: shot_noise
     description : apply Poisson shot noise to images
