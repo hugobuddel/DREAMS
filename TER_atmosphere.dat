@@ -3,6 +3,8 @@
 # date_created : 2023-03-21
 # location : Sidling spring
 # wavelength_unit : nm
+# emission_unit : ph s-1 m-2 um-1 arcsec-2
+# action : transmission
 #
 # Details : http://www.gemini.edu/sciops/ObsProcess/obsConstraints/ocTransSpectra.html
 #
@@ -293,3 +295,4 @@ wavelength transmission emission
 1.0405 0.999979 0.1
 1.041 0.999993 0.1
 1.0415 0.999999 0.1
+1100	    0.8745	        0.1
