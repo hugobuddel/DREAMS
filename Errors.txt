@@ -1,23 +1,20 @@
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
+  File "/Users/anjali/gn.py", line 77, in <module>
+    run_test_and_plot()
+  File "/Users/anjali/gn.py", line 73, in run_test_and_plot
+    test_optical_train.test_load_lfao()
+  File "/Users/anjali/gn.py", line 48, in test_load_lfao
+    opt = scopesim.OpticalTrain(cmd)
   File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 726, in wrapper
     output = func(*args, **kwargs)
   File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 114, in __init__
     self.load(cmds)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 147, in load
-    self.optics_manager = OpticsManager(self.yaml_dicts, self.cmds)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 52, in __init__
-    self.load_effects(yaml_dicts, **self.meta)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 97, in load_effects
-    self.optical_elements.extend(OpticalElement(dic, cmds=self.cmds, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 97, in <genexpr>
-    self.optical_elements.extend(OpticalElement(dic, cmds=self.cmds, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_element.py", line 81, in __init__
-    self.effects.append(make_effect(eff_dic,
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/effects_utils.py", line 63, in make_effect
-    effect = effect_cls(cmds=cmds, **effect_kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 393, in __init__
-    filt_name = from_currsys(kwargs["filter_name"], cmds)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 542, in from_currsys
-    raise ValueError(f"{item} was not found in rc.__currsys__")
-ValueError: !OBS.filter_name was not found in rc.__currsys__
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 148, in load
+    self.update()
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 166, in update
+    for hdr in opt_man.image_plane_headers]
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 197, in image_plane_headers
+    raise ValueError("No DetectorList objects found.")
+ValueError: No DetectorList objects found.
+
