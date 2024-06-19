@@ -24,6 +24,7 @@ properties :
     bg_mag : 14.9
     filter_name : J
 
+---
 
 ### default simulation parameters needed for DREAMS simulation
 object : simulation
@@ -36,7 +37,7 @@ properties :
     seed : 9001
 
   spectral :
-    wave_min : 1.17
+    wave_min : 0.3
     wave_mid : 1.25
     wave_max : 1.33
 
