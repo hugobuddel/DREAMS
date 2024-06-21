@@ -27,7 +27,7 @@ effects:
       filename: "TER_atmosphere.dat"
       rescale_emission:
         filter_name: "!OBS.sky.filter_name"
-        filename_format: "filters/{}.dat"
+        filename_format: "filters/J.dat"
         value: "!OBS.sky.bg_mag"
         unit: mag
 -   name: dreams_static_surfaces
