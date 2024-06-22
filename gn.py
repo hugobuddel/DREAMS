@@ -61,17 +61,17 @@ class TestMakeOpticalTrain:
 
     def plot_data(self):
         if self.hdu_list is not None:
-            plt.imshow(self.hdu_list[1].data, norm=LogNorm())
-            plt.colorbar()  # Add a colorbar to the plot
-            plt.title("Observed Star Field")  # Add a title to the plot
-            plt.xlabel("X Pixels")  # Add an x-axis label
-            plt.ylabel("Y Pixels")  # Add a y-axis label
-            plt.show()
+           for my_hdu in self.hdu_list[1:]:
+                plt.imshow(my_hdu.data, norm=LogNorm())
+                plt.colorbar()  # Add a colorbar to the plot
+                plt.title("Observed Star Field")  # Add a title to the plot
+                plt.xlabel("X Pixels")  # Add an x-axis label
+                plt.ylabel("Y Pixels")  # Add a y-axis label
+                plt.show()
 
 def run_test_and_plot():
     test_optical_train = TestMakeOpticalTrain()
     test_optical_train.test_load_lfao()
-    test_optical_train.plot_data()
 
 # Run the test and plot as soon as the module is imported
 run_test_and_plot()
