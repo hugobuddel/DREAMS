@@ -1,4 +1,71 @@
-File "<stdin>", line 1, in <module>
+astar.scopesim.commands.user_commands - WARNING: Package could not be found: /DREAMS
+astar.scopesim.utils - ERROR: File cannot be found: default.yaml
+astar.scopesim.commands.user_commands - ERROR: default.yaml could not be found.
+astar.bug_report - ERROR: Unhandled exception occured, see log file for details.
+Traceback (most recent call last):
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 726, in wrapper
+    output = func(*args, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 114, in __init__
+    self.load(cmds)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 148, in load
+    self.update()
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 166, in update
+    for hdr in opt_man.image_plane_headers]
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 197, in image_plane_headers
+    raise ValueError("No DetectorList objects found.")
+ValueError: No DetectorList objects found.
+astar.bug_report - ERROR: Python:
+3.9.12 (main, Apr  5 2022, 01:53:17) 
+[Clang 12.0.0 ]
+
+Installed Python packages:
+           anisocado: 0.3.0
+         astar-utils: 0.2.2
+             astropy: 5.3.4
+      beautifulsoup4: 4.12.3
+            docutils: 0.19
+               httpx: 0.23.3
+                lxml: 4.9.4
+          matplotlib: 3.8.4
+      more-itertools: 10.2.0
+               numpy: 1.26.4
+               pooch: 1.8.1
+              pyyaml: 6.0.1
+               scipy: 1.13.0
+            scopesim: 0.8.0
+       scopesim_data: could not be loaded.
+  scopesim_templates: 0.5.1
+         skycalc_ipy: 0.4.0
+             synphot: 1.3.post0
+                tqdm: 4.66.2
+
+Installed IRDB packages:
+          home: version number not available.
+           usr: version number not available.
+           bin: version number not available.
+          sbin: version number not available.
+           etc: version number not available.
+           var: version number not available.
+       Library: version number not available.
+        System: version number not available.
+       private: version number not available.
+          .vol: version number not available.
+         Users: version number not available.
+  Applications: version number not available.
+           opt: version number not available.
+           dev: version number not available.
+       Volumes: version number not available.
+           tmp: version number not available.
+         cores: version number not available.
+
+Operating System info:
+   System: Darwin
+  Release: 22.6.0
+  Version: Darwin Kernel Version 22.6.0: Wed Jul  5 22:21:56 PDT 2023; root:xnu-8796.141.3~6/RELEASE_X86_64
+  Machine: x86_64
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
   File "/Users/anjali/gn.py", line 77, in <module>
     run_test_and_plot()
   File "/Users/anjali/gn.py", line 74, in run_test_and_plot
@@ -16,4 +83,25 @@ File "<stdin>", line 1, in <module>
   File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 197, in image_plane_headers
     raise ValueError("No DetectorList objects found.")
 ValueError: No DetectorList objects found.
-
+>>> 
+(base) anjali@RSAA-024587 ~ % python
+Python 3.9.12 (main, Apr  5 2022, 01:53:17) 
+[Clang 12.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import gn
+astar.scopesim.commands.user_commands - WARNING: Package could not be found: /DREAMS
+astar.scopesim.utils - ERROR: File cannot be found: default.yaml
+astar.scopesim.commands.user_commands - ERROR: default.yaml could not be found.
+astar.bug_report - ERROR: Unhandled exception occured, see log file for details.
+Traceback (most recent call last):
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 726, in wrapper
+    output = func(*args, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 114, in __init__
+    self.load(cmds)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 148, in load
+    self.update()
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 166, in update
+    for hdr in opt_man.image_plane_headers]
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 197, in image_plane_headers
+    raise ValueError("No DetectorList objects found.")
+ValueError: No DetectorList objects found.
