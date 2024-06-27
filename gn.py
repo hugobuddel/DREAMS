@@ -9,13 +9,24 @@ from scopesim import rc
 from matplotlib import pyplot as plt
 from matplotlib.colors import LogNorm
 
+import os.path as pth
+
 if rc.__config__["!SIM.tests.run_integration_tests"] is False:
     pytestmark = pytest.mark.skip("Ignoring DREAMS integration tests")
 
-TOP_PATH = pth.abspath(pth.join(pth.dirname(__file__), "../../"))
+# Set TOP_PATH to the directory containing the DREAMS package
+TOP_PATH = "/Users/anjali/Desktop"
+
 rc.__config__["!SIM.file.local_packages_path"] = TOP_PATH
 
-PKGS = {"DREAMS": "/Users/anjali/DREAMS.zip"}
+# Adjust the PKGS dictionary to reflect the correct path
+PKGS = {"DREAMS": pth.join(TOP_PATH, "DREAMS")}
+
+# Verify the path to the DREAMS package
+if not pth.exists(PKGS["DREAMS"]):
+    raise FileNotFoundError(f"DREAMS package not found at {PKGS['DREAMS']}")
+else:
+    print("DREAMS package found at:", PKGS["DREAMS"])
 
 PLOTS = True
 
