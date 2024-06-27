@@ -1,4 +1,6 @@
-DREAMS package found at: /Users/anjali/Desktop/DREAMS
+
+          DREAMS package found at: /Users/anjali/Desktop/DREAMS
+Starting observation test...
 astar.bug_report - ERROR: Unhandled exception occured, see log file for details.
 Traceback (most recent call last):
   File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 726, in wrapper
@@ -35,65 +37,3 @@ Traceback (most recent call last):
   File "astropy/io/ascii/cparser.pyx", line 667, in astropy.io.ascii.cparser.CParser._convert_data
   File "astropy/io/ascii/cparser.pyx", line 628, in astropy.io.ascii.cparser.CParser._get_comments
 ValueError: chr() arg not in range(0x110000)
-astar.bug_report - ERROR: Python:
-3.9.12 (main, Apr  5 2022, 01:53:17) 
-[Clang 12.0.0 ]
-
-Installed Python packages:
-           anisocado: 0.3.0
-         astar-utils: 0.2.2
-             astropy: 5.3.4
-      beautifulsoup4: 4.12.3
-            docutils: 0.19
-               httpx: 0.23.3
-                lxml: 4.9.4
-          matplotlib: 3.8.4
-      more-itertools: 10.2.0
-               numpy: 1.26.4
-               pooch: 1.8.1
-              pyyaml: 6.0.1
-               scipy: 1.13.0
-            scopesim: 0.8.0
-       scopesim_data: could not be loaded.
-  scopesim_templates: 0.5.1
-         skycalc_ipy: 0.4.0
-             synphot: 1.3.post0
-                tqdm: 4.66.2
-
-Installed IRDB packages:
-           untitled folder: version number not available.
-                  research: version number not available.
-  Observational techniques: version number not available.
-                 Let's see: version number not available.
-            Real Real life: version number not available.
-                   archive: version number not available.
-                      LFOA: 2022-04-12
-                   PyCharm: version number not available.
-         untitled folder 2: version number not available.
-          Great Research..: version number not available.
-         untitled folder 3: version number not available.
-                      LiFe: version number not available.
-         untitled folder 4: version number not available.
-               Great codes: version number not available.
-              Simulation..: version number not available.
-                  New_Visa: version number not available.
-            Scholarship...: version number not available.
-              Assignment_2: version number not available.
-                Internship: version number not available.
-            Great proposal: version number not available.
-            Conference IAC: version number not available.
-                   REAL...: version number not available.
-                    DREAMS: version number not available.
-             sCIENCE STRAT: version number not available.
-               Bee Project: version number not available.
-                      Data: version number not available.
-                      TAC1: version number not available.
-             Extracirculum: version number not available.
-           Tripura Vimaana: version number not available.
-
-Operating System info:
-   System: Darwin
-  Release: 22.6.0
-  Version: Darwin Kernel Version 22.6.0: Wed Jul  5 22:21:56 PDT 2023; root:xnu-8796.141.3~6/RELEASE_X86_64
-  Machine: x86_64
-
