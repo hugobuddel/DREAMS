@@ -1,19 +1,40 @@
-astar.scopesim.commands.user_commands - WARNING: Package could not be found: /DREAMS
-astar.scopesim.utils - ERROR: File cannot be found: default.yaml
-astar.scopesim.commands.user_commands - ERROR: default.yaml could not be found.
+DREAMS package found at: /Users/anjali/Desktop/DREAMS
 astar.bug_report - ERROR: Unhandled exception occured, see log file for details.
 Traceback (most recent call last):
   File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 726, in wrapper
     output = func(*args, **kwargs)
   File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 114, in __init__
     self.load(cmds)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 148, in load
-    self.update()
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 166, in update
-    for hdr in opt_man.image_plane_headers]
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 197, in image_plane_headers
-    raise ValueError("No DetectorList objects found.")
-ValueError: No DetectorList objects found.
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 147, in load
+    self.optics_manager = OpticsManager(self.yaml_dicts, self.cmds)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 52, in __init__
+    self.load_effects(yaml_dicts, **self.meta)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 97, in load_effects
+    self.optical_elements.extend(OpticalElement(dic, cmds=self.cmds, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 97, in <genexpr>
+    self.optical_elements.extend(OpticalElement(dic, cmds=self.cmds, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_element.py", line 81, in __init__
+    self.effects.append(make_effect(eff_dic,
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/effects_utils.py", line 63, in make_effect
+    effect = effect_cls(cmds=cmds, **effect_kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 235, in __init__
+    super().__init__(**kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 77, in __init__
+    super().__init__(filename=filename, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/effects.py", line 40, in __init__
+    super().__init__(filename=filename, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/data_container.py", line 115, in __init__
+    self._load_ascii()
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/data_container.py", line 142, in _load_ascii
+    self.table = ioascii.read(filename_full,
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/io/ascii/ui.py", line 393, in read
+    dat = fast_reader_rdr.read(table)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/io/ascii/fastbasic.py", line 153, in read
+    data, comments = self.engine.read(try_int, try_float, try_string)
+  File "astropy/io/ascii/cparser.pyx", line 427, in astropy.io.ascii.cparser.CParser.read
+  File "astropy/io/ascii/cparser.pyx", line 667, in astropy.io.ascii.cparser.CParser._convert_data
+  File "astropy/io/ascii/cparser.pyx", line 628, in astropy.io.ascii.cparser.CParser._get_comments
+ValueError: chr() arg not in range(0x110000)
 astar.bug_report - ERROR: Python:
 3.9.12 (main, Apr  5 2022, 01:53:17) 
 [Clang 12.0.0 ]
@@ -40,23 +61,35 @@ Installed Python packages:
                 tqdm: 4.66.2
 
 Installed IRDB packages:
-          home: version number not available.
-           usr: version number not available.
-           bin: version number not available.
-          sbin: version number not available.
-           etc: version number not available.
-           var: version number not available.
-       Library: version number not available.
-        System: version number not available.
-       private: version number not available.
-          .vol: version number not available.
-         Users: version number not available.
-  Applications: version number not available.
-           opt: version number not available.
-           dev: version number not available.
-       Volumes: version number not available.
-           tmp: version number not available.
-         cores: version number not available.
+           untitled folder: version number not available.
+                  research: version number not available.
+  Observational techniques: version number not available.
+                 Let's see: version number not available.
+            Real Real life: version number not available.
+                   archive: version number not available.
+                      LFOA: 2022-04-12
+                   PyCharm: version number not available.
+         untitled folder 2: version number not available.
+          Great Research..: version number not available.
+         untitled folder 3: version number not available.
+                      LiFe: version number not available.
+         untitled folder 4: version number not available.
+               Great codes: version number not available.
+              Simulation..: version number not available.
+                  New_Visa: version number not available.
+            Scholarship...: version number not available.
+              Assignment_2: version number not available.
+                Internship: version number not available.
+            Great proposal: version number not available.
+            Conference IAC: version number not available.
+                   REAL...: version number not available.
+                    DREAMS: version number not available.
+             sCIENCE STRAT: version number not available.
+               Bee Project: version number not available.
+                      Data: version number not available.
+                      TAC1: version number not available.
+             Extracirculum: version number not available.
+           Tripura Vimaana: version number not available.
 
 Operating System info:
    System: Darwin
@@ -64,44 +97,3 @@ Operating System info:
   Version: Darwin Kernel Version 22.6.0: Wed Jul  5 22:21:56 PDT 2023; root:xnu-8796.141.3~6/RELEASE_X86_64
   Machine: x86_64
 
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/Users/anjali/gn.py", line 77, in <module>
-    run_test_and_plot()
-  File "/Users/anjali/gn.py", line 74, in run_test_and_plot
-    test_optical_train.test_load_lfao()
-  File "/Users/anjali/gn.py", line 48, in test_load_lfao
-    opt = scopesim.OpticalTrain(cmd)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 726, in wrapper
-    output = func(*args, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 114, in __init__
-    self.load(cmds)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 148, in load
-    self.update()
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 166, in update
-    for hdr in opt_man.image_plane_headers]
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 197, in image_plane_headers
-    raise ValueError("No DetectorList objects found.")
-ValueError: No DetectorList objects found.
->>> 
-(base) anjali@RSAA-024587 ~ % python
-Python 3.9.12 (main, Apr  5 2022, 01:53:17) 
-[Clang 12.0.0 ] :: Anaconda, Inc. on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import gn
-astar.scopesim.commands.user_commands - WARNING: Package could not be found: /DREAMS
-astar.scopesim.utils - ERROR: File cannot be found: default.yaml
-astar.scopesim.commands.user_commands - ERROR: default.yaml could not be found.
-astar.bug_report - ERROR: Unhandled exception occured, see log file for details.
-Traceback (most recent call last):
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 726, in wrapper
-    output = func(*args, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 114, in __init__
-    self.load(cmds)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 148, in load
-    self.update()
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 166, in update
-    for hdr in opt_man.image_plane_headers]
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 197, in image_plane_headers
-    raise ValueError("No DetectorList objects found.")
-ValueError: No DetectorList objects found.
