@@ -1,5 +1,4 @@
-
-          DREAMS package found at: /Users/anjali/Desktop/DREAMS
+DREAMS package found at: /Users/anjali/Desktop/DREAMS
 Starting observation test...
 astar.bug_report - ERROR: Unhandled exception occured, see log file for details.
 Traceback (most recent call last):
