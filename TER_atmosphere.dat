@@ -1,6 +1,6 @@
 # date_created : 2023-03-21
 # location : Sidling spring
-# wavelength_unit : μm
+# wavelength_unit : um
 # emission_unit : ph s-1 m-2 um-1 arcsec-2
 # action : transmission
 #
@@ -151,7 +151,7 @@ wavelength transmission emission
 1258 0.994142 0.1
 1259 0.984481 0.1
 1260 0.987911 0.1
-]1261 0.96995 0.1
+1261 0.96995 0.1
 1262 0.964341 0.1
 1263 0.952896 0.1
 1264 0.940197 0.1
