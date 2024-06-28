@@ -4,7 +4,7 @@
 object : instrument
 alias : INST
 name : DREAMS
-description : |
+description : 
   DREAMS is a 0.5m telescope operated
   by the Department of Astropyhics at the University of ANU.
 
@@ -41,7 +41,7 @@ effects:
     class: FilterCurve
     kwargs:
       filter_name: "!OBS.filter_name"
-      filename_format: "filters/{}.dat"
+      filename_format: "filters/J.dat"
       minimum_throughput: !!float 1.01E-4
       outer: 0.05088
       outer_unit: "m"
