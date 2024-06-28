@@ -1,4 +1,3 @@
- import testt
 DREAMS package found at: /Users/anjali/Desktop/DREAMS
 Starting observation test...
 astar.bug_report - ERROR: Unhandled exception occured, see log file for details.
@@ -32,7 +31,3 @@ Traceback (most recent call last):
   File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scipy/interpolate/_rgi.py", line 31, in _check_points
     raise ValueError(
 ValueError: The points in dimension 0 must be strictly ascending or descending
-astar.bug_report - ERROR: Python:
-3.9.12 (main, Apr  5 2022, 01:53:17) 
-[Clang 12.0.0 ]
-
