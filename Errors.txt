@@ -1,38 +1,38 @@
+ import testt
 DREAMS package found at: /Users/anjali/Desktop/DREAMS
 Starting observation test...
 astar.bug_report - ERROR: Unhandled exception occured, see log file for details.
 Traceback (most recent call last):
   File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/utils.py", line 726, in wrapper
     output = func(*args, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 114, in __init__
-    self.load(cmds)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 147, in load
-    self.optics_manager = OpticsManager(self.yaml_dicts, self.cmds)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 52, in __init__
-    self.load_effects(yaml_dicts, **self.meta)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 97, in load_effects
-    self.optical_elements.extend(OpticalElement(dic, cmds=self.cmds, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optics_manager.py", line 97, in <genexpr>
-    self.optical_elements.extend(OpticalElement(dic, cmds=self.cmds, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_element.py", line 81, in __init__
-    self.effects.append(make_effect(eff_dic,
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/effects_utils.py", line 63, in make_effect
-    effect = effect_cls(cmds=cmds, **effect_kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 235, in __init__
-    super().__init__(**kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 77, in __init__
-    super().__init__(filename=filename, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/effects.py", line 40, in __init__
-    super().__init__(filename=filename, **kwargs)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/data_container.py", line 115, in __init__
-    self._load_ascii()
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/data_container.py", line 142, in _load_ascii
-    self.table = ioascii.read(filename_full,
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/io/ascii/ui.py", line 393, in read
-    dat = fast_reader_rdr.read(table)
-  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/io/ascii/fastbasic.py", line 153, in read
-    data, comments = self.engine.read(try_int, try_float, try_string)
-  File "astropy/io/ascii/cparser.pyx", line 427, in astropy.io.ascii.cparser.CParser.read
-  File "astropy/io/ascii/cparser.pyx", line 667, in astropy.io.ascii.cparser.CParser._convert_data
-  File "astropy/io/ascii/cparser.pyx", line 628, in astropy.io.ascii.cparser.CParser._get_comments
-ValueError: chr() arg not in range(0x110000)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/optics/optical_train.py", line 209, in observe
+    source = effect.apply_to(source)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves.py", line 116, in apply_to
+    obj.spectra[isp] = combine_two_spectra(spec, thru, "multiply",
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scopesim/effects/ter_curves_utils.py", line 385, in combine_two_spectra
+    spec_c = spec_a(wave) * spec_b(wave)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/synphot/spectrum.py", line 367, in __call__
+    return self.model(w.value) * self._internal_flux_unit
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/modeling/core.py", line 418, in __call__
+    new_call = make_function_with_signature(
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/modeling/core.py", line 395, in __call__
+    return super(cls, self).__call__(*inputs, **kwargs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/modeling/core.py", line 1125, in __call__
+    outputs = self._generic_evaluate(evaluate, inputs, fill_value, with_bbox)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/modeling/core.py", line 1087, in _generic_evaluate
+    outputs = evaluate(_inputs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/modeling/core.py", line 975, in evaluate
+    return self.evaluate(*chain(_inputs, parameters))
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/synphot/models.py", line 432, in evaluate
+    y = super(Empirical1D, self).evaluate(inputs)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/astropy/modeling/tabular.py", line 242, in evaluate
+    result = interpn(
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scipy/interpolate/_rgi.py", line 726, in interpn
+    grid, descending_dimensions = _check_points(points)
+  File "/Users/anjali/opt/anaconda3/lib/python3.9/site-packages/scipy/interpolate/_rgi.py", line 31, in _check_points
+    raise ValueError(
+ValueError: The points in dimension 0 must be strictly ascending or descending
+astar.bug_report - ERROR: Python:
+3.9.12 (main, Apr  5 2022, 01:53:17) 
+[Clang 12.0.0 ]
+
