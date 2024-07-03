@@ -10,7 +10,7 @@ from scopesim import rc
 from scopesim.source.source_templates import star_field
 import scopesim_templates as sim_tp
 
-PLOTS = False
+PLOTS = True
 
 if rc.__config__["!SIM.tests.run_integration_tests"] is False:
     pytestmark = pytest.mark.skip("Ignoring DREAMS integration tests")
@@ -65,6 +65,17 @@ class TestObserves:
             plt.xlabel("X Pixels")
             plt.ylabel("Y Pixels")
             plt.show()
+
+            detector_order = [2, 1, 4, 3, 6, 5]
+            # detector_order = [1, 1, 1, 1, 1, 1]  # To test with 1 detector
+            plt.figure(figsize=(20, 20))
+            for plot_number, hdu_number in enumerate(detector_order, 1):
+                plt.subplot(3, 2, plot_number)
+                plt.imshow(hdus[0][hdu_number].data, origin="lower", norm=LogNorm())
+            plt.show()
+
+
+        return dreams, src
 
     @pytest.mark.slow
     def test_observes_from_scopesim_templates(self):
