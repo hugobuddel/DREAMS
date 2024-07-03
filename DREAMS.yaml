@@ -50,3 +50,9 @@ effects:
       minimum_throughput: !!float 1.01E-4
       outer: 0.05088
       outer_unit: "m"
+
+# ExtraFitsKeywords class to prevent the default headers to be saved.
+- name: fits_headers
+  description: FITS headers
+  class: ExtraFitsKeywords
+  include: True
