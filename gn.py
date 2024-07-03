@@ -9,8 +9,9 @@ import scopesim
 from scopesim import rc
 from scopesim.source.source_templates import star_field
 import scopesim_templates as sim_tp
+from scopesim.optics.fov_manager import FOVManager
 
-PLOTS = False
+PLOTS = True
 
 if rc.__config__["!SIM.tests.run_integration_tests"] is False:
     pytestmark = pytest.mark.skip("Ignoring DREAMS integration tests")
@@ -37,7 +38,7 @@ class TestLoads:
 class TestObserves:
     def test_something_comes_out(self):
         print("Starting observation test...")
-        src = star_field(10000, 10, 20, width=700)
+        src = star_field(10000, 10, 20, width=10000)
 
         cmds = scopesim.UserCommands(use_instrument="DREAMS")
         cmds["!OBS.dit"] = 10
@@ -47,7 +48,24 @@ class TestObserves:
 
         dreams = scopesim.OpticalTrain(cmds)
         dreams["detector_linearity"].include = False
-        dreams.observe(src)
+
+        # Hackish workaround to get a larger Field of View.
+        # See https://github.com/AstarVienna/ScopeSim/pull/433
+        # Recreate the fov_manager.
+        # The preload_fovs is the important part.
+        dreams.fov_manager = FOVManager(dreams.optics_manager.fov_setup_effects, cmds=dreams.cmds, preload_fovs=False)
+        # Make the initial field of view 10 times larges than normal.
+        dreams.fov_manager.volumes_list[0]["x_min"] = -18000  # arcsec
+        dreams.fov_manager.volumes_list[0]["x_max"] = 18000
+        dreams.fov_manager.volumes_list[0]["y_min"] = -18000
+        dreams.fov_manager.volumes_list[0]["y_max"] = 18000
+        # Shrink the field of view to the detector size.
+        dreams.fov_manager._fovs_list = list(dreams.fov_manager.generate_fovs_list())
+
+        # We need to put update=False here, because otherwise the hacked
+        # fov_manager gets reinitialized. dreams can therefor only be used
+        # once, and needs to be recreated for the next simulation.
+        dreams.observe(src, update=False)
         hdus = dreams.readout()
 
         print(f"Observation completed. HDUList type: {type(hdus[0])}")
@@ -65,6 +83,17 @@ class TestObserves:
             plt.xlabel("X Pixels")
             plt.ylabel("Y Pixels")
             plt.show()
+
+            detector_order = [2, 1, 4, 3, 6, 5]
+            # detector_order = [1, 1, 1, 1, 1, 1]  # To test with 1 detector
+            plt.figure(figsize=(20, 20))
+            for plot_number, hdu_number in enumerate(detector_order, 1):
+                plt.subplot(3, 2, plot_number)
+                plt.imshow(hdus[0][hdu_number].data, origin="lower", norm=LogNorm())
+            plt.show()
+
+
+        return dreams, src
 
     @pytest.mark.slow
     def test_observes_from_scopesim_templates(self):
