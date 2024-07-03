@@ -38,7 +38,7 @@ class TestLoads:
 class TestObserves:
     def test_something_comes_out(self):
         print("Starting observation test...")
-        src = star_field(10000, 10, 20, width=700)
+        src = star_field(10000, 10, 20, width=10000)
 
         cmds = scopesim.UserCommands(use_instrument="DREAMS")
         cmds["!OBS.dit"] = 10
