@@ -38,7 +38,11 @@ class TestLoads:
 class TestObserves:
     def test_something_comes_out(self):
         print("Starting observation test...")
-        src = star_field(10000, 10, 20, width=700)
+
+        # Setting the width to 10000 arcsec makes the field fill the image.
+        # A with of 700 works as well, but covers only a fraction of the
+        # middle two detectors.
+        src = star_field(10000, 10, 20, width=10000)
 
         cmds = scopesim.UserCommands(use_instrument="DREAMS")
         cmds["!OBS.dit"] = 10
