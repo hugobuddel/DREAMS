@@ -18,7 +18,12 @@ effects:
     description : Schoepfl PSF
     class : SeeingPSF
     kwargs :
-      fwhm : 1.5       # [arcsec]
+      # Original PSF FWHM:
+      #fwhm : 1.5.       # [arcsec]
+      # The original PSF about the size of a pixel.
+      # This does not work well in ScopeSim currently.
+      # Therefore the PSF is arbitrarily resized:
+      fwhm : 15.       # [arcsec]
 -   name : skycalc_average_atmo
     description : atmospheric properties for a default skycalc run
     class : AtmosphericTERCurve
