@@ -66,6 +66,14 @@ class TestObserves:
             plt.ylabel("Y Pixels")
             plt.show()
 
+            detector_order = [2, 1, 4, 3, 6, 5]
+            plt.figure(figsize=(20, 20))
+            for plot_number, hdu_number in enumerate(detector_order, 1):
+                plt.subplot(3, 2, plot_number)
+                plt.imshow(hdus[0][hdu_number].data, origin="lower", norm=LogNorm())
+                plt.colorbar()
+            plt.show()
+
     @pytest.mark.slow
     def test_observes_from_scopesim_templates(self):
         print("Starting scopesim templates observation test...")
