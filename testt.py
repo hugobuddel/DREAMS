@@ -74,7 +74,7 @@ class TestObserves:
         # once, and needs to be recreated for the next simulation.
         dreams.observe(src, update=False)
 
-        hdus = dreams.readout()
+        hdus = dreams.readout("dreams.fits")
 
         print(f"Observation completed. HDUList type: {type(hdus[0])}")
 
