@@ -49,6 +49,7 @@ class TestObserves:
         cmds["!DET.bin_size"] = 1
         cmds["!OBS.sky.bg_mag"] = 14.9
         cmds["!OBS.sky.filter_name"] = "J"
+        cmds["SIM.sub_pixel.flag"] = True
 
         dreams = scopesim.OpticalTrain(cmds)
         dreams["detector_linearity"].include = False
