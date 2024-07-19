@@ -35,7 +35,8 @@ else:
     print("DREAMS package found at:", PKGS["DREAMS"])
 
 cmds = scopesim.UserCommands(use_instrument="DREAMS")
-cmds["!OBS.dit"] = 10
+cmds["!OBS.dit"] = 1000
+cmds["!OBS.ndit"] = 1000
 cmds["!DET.bin_size"] = 1
 cmds["!OBS.sky.bg_mag"] = 14.9
 cmds["!OBS.sky.filter_name"] = "J"
@@ -52,7 +53,7 @@ dreams.fov_manager.volumes_list[0]["y_max"] = 18000
 dreams.fov_manager._fovs_list = list(dreams.fov_manager.generate_fovs_list())
 
 print("scopesim package loaded successfully.")
-src= sim_tp.stellar.clusters.cluster(mass=1000,  distance=50000, core_radius=0.3, seed=9002)
+src = sim_tp.stellar.clusters.cluster(mass=10000,  distance=50000, core_radius=70, seed=9002)
 
 dreams.observe(src, update=False)
 print("yessss anjali")
@@ -63,12 +64,12 @@ wave = np.arange(3000, 11000)
 plt.plot(wave, dreams.optics_manager.surfaces_table.throughput(wave))
 plt.subplot(122)
 im = hdus[0][1].data
-detector_order = [2, 1, 4, 3, 6, 5]
+# detector_order = [2, 1, 4, 3, 6, 5]
+detector_order = [1, 2, 3, 4, 5, 6]
 plt.figure(figsize=(20, 20))
 for plot_number, hdu_number in enumerate(detector_order, 1):
     plt.subplot(3, 2, plot_number)
-    plt.figure(figsize=(10,8))
-    plt.imshow(hdus[0][1].data, norm=LogNorm(vmax=3E4, vmin=3E3), cmap="hot")
+    plt.imshow(hdus[0][hdu_number].data, norm=LogNorm(), cmap="hot")
     plt.colorbar()
     
 plt.show()
