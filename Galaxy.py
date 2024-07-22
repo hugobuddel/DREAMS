@@ -53,7 +53,7 @@ dreams.fov_manager._fovs_list = list(dreams.fov_manager.generate_fovs_list())
 
 print("scopesim package loaded successfully.")
 #src = sim_tp.stellar.clusters.cluster(mass=10000,  distance=50000, core_radius=70, seed=9002)
-src= sim_tp.extragalactic.galaxy("kc96/s0", z=2.48, amplitude= 14.5, filter_curve="J", pixel_scale= 2.48, r_eff=2.5, n=4, ellip=0.5, theta=45, extend=3)
+src= sim_tp.extragalactic.galaxy("kc96/s0", z=2.48, amplitude= 14.5, filter_curve="J", pixel_scale= 2.48, r_eff=2.5, n=4, ellip=0.5, theta=45, extend=3) # pixel_scale is in arcsec/pixel
 dreams.observe(src, update=False)
 print("yessss anjali")
 hdus = dreams.readout()
