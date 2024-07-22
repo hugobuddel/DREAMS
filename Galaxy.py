@@ -34,8 +34,8 @@ else:
     print("DREAMS package found at:", PKGS["DREAMS"])
 
 cmds = scopesim.UserCommands(use_instrument="DREAMS")
-cmds["!OBS.dit"] = 10
-cmds["!OBS.ndit"] = 10
+cmds["!OBS.dit"] = 1000
+cmds["!OBS.ndit"] = 1000
 cmds["!DET.bin_size"] = 1
 cmds["!OBS.sky.bg_mag"] = 14.9
 cmds["!OBS.sky.filter_name"] = "J"
