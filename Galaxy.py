@@ -52,7 +52,6 @@ dreams.fov_manager.volumes_list[0]["y_max"] = 18000
 dreams.fov_manager._fovs_list = list(dreams.fov_manager.generate_fovs_list())
 
 print("scopesim package loaded successfully.")
-#src = sim_tp.stellar.clusters.cluster(mass=10000,  distance=50000, core_radius=70, seed=9002)
 src= sim_tp.extragalactic.galaxy("kc96/s0", z=2.48, amplitude= 14.5, filter_curve="J", pixel_scale= 2.48, r_eff=2.5, n=4, ellip=0.5, theta=45, extend=3) # pixel_scale is in arcsec/pixel
 dreams.observe(src, update=False)
 print("yessss anjali")
@@ -67,7 +66,8 @@ detector_order = [1, 2, 3, 4, 5, 6]
 plt.figure(figsize=(20, 20))
 for plot_number, hdu_number in enumerate(detector_order, 1):
     plt.subplot(3, 2, plot_number)
-    plt.imshow(np.log10(src.fields[0].data), origin="lower")
+    plt.imshow(hdus[0][hdu_number].data, norm=LogNorm(), cmap="hot")
+    #plt.imshow(np.log10(src.fields[0].data), origin="lower")
     plt.colorbar()
     
 plt.show()
