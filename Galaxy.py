@@ -66,8 +66,7 @@ detector_order = [1, 2, 3, 4, 5, 6]
 plt.figure(figsize=(20, 20))
 for plot_number, hdu_number in enumerate(detector_order, 1):
     plt.subplot(3, 2, plot_number)
-    plt.imshow(hdus[0][hdu_number].data, norm=LogNorm(), cmap="hot")
-    #plt.imshow(np.log10(src.fields[0].data), origin="lower")
+    plt.imshow(np.log10(src.fields[0][hdu_number].data), origin="lower")
     plt.colorbar()
     
 plt.show()
