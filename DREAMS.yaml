@@ -27,7 +27,7 @@ effects:
       filename: "TER_atmosphere.dat"
       rescale_emission:
         filter_name: "!OBS.sky.filter_name"
-        filename_format: "filters/J.dat"
+        filename_format: "filters/{}.dat"
         value: "!OBS.sky.bg_mag"
         unit: mag
 -   name: dreams_static_surfaces
@@ -41,7 +41,7 @@ effects:
     class: FilterCurve
     kwargs:
       filter_name: "!OBS.filter_name"
-      filename_format: "filters/J.dat"
+      filename_format: "filters/{}.dat"
       minimum_throughput: !!float 1.01E-4
       outer: 0.05088
       outer_unit: "m"
